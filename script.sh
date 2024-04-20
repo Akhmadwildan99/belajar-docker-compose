@@ -13,3 +13,6 @@ docker compose stop
 
 # menghapus container per config file
 docker compose down
+
+#  melihat project docker compose yang sedang running
+docker compose ls
