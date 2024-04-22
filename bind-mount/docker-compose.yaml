@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  mongodb-example:
+    image: mongo:latest
+    container_name: mongodb-example
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: akhmadwildan
+      MONGO_INITDB_ROOT_PASSWORD: akhmadwildan
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - "./data-mongo1:/data/db"
+  mongodb-example2:
+    image: mongo:latest
+    container_name: mongodb-example2
+    ports:
+      - "27087:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: akhmadwildan
+      MONGO_INITDB_ROOT_PASSWORD: akhmadwildan
+      MONGO_INITDB_DATABASE: admin
+    volumes:
+      - type: bind
+        source: "./data-mongo2"
+        target: "/data/db"
+        read_only: false
