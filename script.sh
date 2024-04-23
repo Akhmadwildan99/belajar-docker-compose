@@ -22,3 +22,9 @@ docker volume rm [nama volume]
 
 # menghapus volume yang tidak dipakai
 docker volume  prune
+
+# To see list of network
+ docker network ls
+
+ # To see real time events on docker
+ docker events --filter 'container=name'
