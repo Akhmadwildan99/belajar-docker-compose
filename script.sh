@@ -28,3 +28,9 @@ docker volume  prune
 
  # To see real time events on docker
  docker events --filter 'container=name'
+
+ # To see the resource limit container
+ docker container stats
+
+ # create container that include dockerfile but with no create container
+ docker compose build
