@@ -34,3 +34,6 @@ docker volume  prune
 
  # create container that include dockerfile but with no create container
  docker compose build
+
+ #command extend service
+ docker compose -f [namafile.yaml] -f [namafile.yaml] create
